@@ -1,0 +1,505 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "Cadastro de localidades",
+        "version": "1.0"
+    },
+    "paths": {
+        "/cidades": {
+            "get": {
+                "tags": [
+                    "cidades"
+                ],
+                "summary": "Lista de cidades",
+                "description": "Todos os cidades",
+                "operationId": "d573579429e235d6d8ae9831df545fc1",
+                "responses": {
+                    "default": {
+                        "description": "lista de cidades "
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "cidades"
+                ],
+                "summary": "Adicionar cidade",
+                "operationId": "398feadc35aa447a864e4b46bdc12af8",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+                                    "nome": {
+                                        "type": "string"
+                                    },
+                                    "sigla": {
+                                        "type": "string"
+                                    },
+                                    "estado_id": {
+                                        "type": "string"
+                                    }
+                                },
+                                "type": "object",
+                                "example": {
+                                    "nome": "pais",
+                                    "sigla": "ps",
+                                    "estado_id": "1"
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            }
+        },
+        "/cidades/{id}": {
+            "get": {
+                "tags": [
+                    "cidades"
+                ],
+                "summary": "buscar cidade",
+                "description": "buscar cidade",
+                "operationId": "21920ab8ee5803a68495213db775932a",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Parameter ",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        },
+                        "examples": {
+                            "int": {
+                                "summary": "An int value.",
+                                "value": "1"
+                            }
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "OK"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "cidades"
+                ],
+                "summary": "Updates uma cidade",
+                "operationId": "26bb596a9d3087f4ac82e5640d575315",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Update uma cidade",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        },
+                        "examples": {
+                            "int": {
+                                "summary": "cidade_id",
+                                "value": "1"
+                            }
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+                                    "nome": {
+                                        "type": "string"
+                                    },
+                                    "sigla": {
+                                        "type": "string"
+                                    },
+                                    "estado_id": {
+                                        "type": "string"
+                                    }
+                                },
+                                "type": "object",
+                                "example": {
+                                    "nome": "cidade",
+                                    "sigla": "cd",
+                                    "estado_id": "2"
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "cidades"
+                ],
+                "summary": "Delete cidade",
+                "description": "Delete cidade",
+                "operationId": "122f3573174de781bd7f443de0880322",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Parameter ",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        },
+                        "examples": {
+                            "int": {
+                                "summary": "An int value.",
+                                "value": "1"
+                            }
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "OK"
+                    }
+                }
+            }
+        },
+        "/estados": {
+            "get": {
+                "tags": [
+                    "estados"
+                ],
+                "summary": "Lista de estados",
+                "description": "Todos os estados",
+                "operationId": "0234e08577fa19b38f8f0a9be17f9042",
+                "responses": {
+                    "default": {
+                        "description": "lista de estados "
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "estados"
+                ],
+                "summary": "Adicionar estado",
+                "operationId": "88f2d4831439d03019c796d9f9e75531",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+                                    "nome": {
+                                        "type": "string"
+                                    },
+                                    "sigla": {
+                                        "type": "string"
+                                    },
+                                    "pais_id": {
+                                        "type": "string"
+                                    }
+                                },
+                                "type": "object",
+                                "example": {
+                                    "nome": "estado",
+                                    "sigla": "es",
+                                    "pais_id": "1"
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            }
+        },
+        "/estados/{id}": {
+            "get": {
+                "tags": [
+                    "estados"
+                ],
+                "summary": "buscar estado",
+                "description": "buscar estado",
+                "operationId": "455dd3b6d9d801bb19cfd82ed3a1da38",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Parameter ",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        },
+                        "examples": {
+                            "int": {
+                                "summary": "An int value.",
+                                "value": "1"
+                            }
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "OK"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "estados"
+                ],
+                "summary": "Updates um estado",
+                "operationId": "385fa643714d016f9edf2fe20f4973f7",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Update um estado",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        },
+                        "examples": {
+                            "int": {
+                                "summary": "estado_id",
+                                "value": "1"
+                            }
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+                                    "nome": {
+                                        "type": "string"
+                                    },
+                                    "sigla": {
+                                        "type": "string"
+                                    },
+                                    "pais_id": {
+                                        "type": "string"
+                                    }
+                                },
+                                "type": "object",
+                                "example": {
+                                    "nome": "pais",
+                                    "sigla": "ps",
+                                    "pais_id": "1"
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "estados"
+                ],
+                "summary": "Delete estado",
+                "description": "Delete estado",
+                "operationId": "9269ed7c4d2175b7d8cd5c2a40be9e73",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Parameter ",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        },
+                        "examples": {
+                            "int": {
+                                "summary": "An int value.",
+                                "value": "1"
+                            }
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "OK"
+                    }
+                }
+            }
+        },
+        "/paises": {
+            "get": {
+                "tags": [
+                    "paises"
+                ],
+                "summary": "Lista de paises",
+                "description": "Todos os paises",
+                "operationId": "9d72fe67d10a93f9a05de0cbb9dbc82c",
+                "responses": {
+                    "default": {
+                        "description": "lista de paises "
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "paises"
+                ],
+                "summary": "Adicionar país",
+                "operationId": "fe75bdfb046514d54b8ec4b0302b395d",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+                                    "nome": {
+                                        "type": "string"
+                                    },
+                                    "sigla": {
+                                        "type": "string"
+                                    }
+                                },
+                                "type": "object",
+                                "example": {
+                                    "nome": "pais",
+                                    "sigla": "ps"
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            }
+        },
+        "/paises/{id}": {
+            "get": {
+                "tags": [
+                    "paises"
+                ],
+                "summary": "buscar pais",
+                "description": "buscar pais",
+                "operationId": "c17bd4cb04d2ce99426e2a2a2c5de4b8",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Parameter ",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        },
+                        "examples": {
+                            "int": {
+                                "summary": "An int value.",
+                                "value": "1"
+                            }
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "OK"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "paises"
+                ],
+                "summary": "Updates um pais",
+                "operationId": "3957b7dbd00dedb5c3ffd1aa7d409d57",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Update um país",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        },
+                        "examples": {
+                            "int": {
+                                "summary": "pais_id",
+                                "value": "1"
+                            }
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+                                    "nome": {
+                                        "type": "string"
+                                    },
+                                    "sigla": {
+                                        "type": "string"
+                                    }
+                                },
+                                "type": "object",
+                                "example": {
+                                    "nome": "pais",
+                                    "sigla": "ps"
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "paises"
+                ],
+                "summary": "Delete país",
+                "description": "Delete país",
+                "operationId": "d6e931ee177e6864733df81ba39bcdc4",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Parameter ",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        },
+                        "examples": {
+                            "int": {
+                                "summary": "An int value.",
+                                "value": "1"
+                            }
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "OK"
+                    }
+                }
+            }
+        }
+    }
+}
